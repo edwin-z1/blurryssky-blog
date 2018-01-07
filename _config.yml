@@ -4,8 +4,8 @@
 
 # Site
 title: blurryssky's blog
-subtitle: SICK TO BE SAME!
-author: blurryssky zhang
+subtitle: SICK TO BE SAME
+author: blurryssky
 language:
 timezone:
 
@@ -20,7 +20,7 @@ permalink_defaults:
 
 # Site settings
 SEOTitle: blurryssky的博客 | blurryssky's Blog
-header-img: img/home-bg.jpg
+header-img: img/home-new-bg.jpg
 email: blurryssky@icloud.com
 description: ""
 keyword: ""
@@ -30,7 +30,7 @@ keyword: ""
 # RSS: false
 # weibo_username:     Demonbane
 # zhihu_username:     Demonbane
-# github_username:    Kaijun
+github_username:    blurryssky
 # twitter_username:   Demonbane_x
 # facebook_username:  demonbane.cn
 # linkedin_username:  kaijun-chen-42089354
@@ -148,4 +148,4 @@ theme: huxblog
 deploy:
   type: git
   repo: https://github.com/blurryssky/blurryssky.github.io
-  branch: gh-pages
+  # branch: gh-pages
