@@ -1,14 +1,18 @@
 ---
 title: Core Animation Basics(译)
 date: 2018-01-04 16:44:52
-tags: iOS开发 CoreAnimation(译)
+tags: 
+	- iOS开发 
+	- CoreAnimation
+	- CoreAnimation（官方文档翻译）
+	
 ---
 
 # [文档地址](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/CoreAnimationBasics/CoreAnimationBasics.html)
 
 **😑有些翻译的不通顺的地方，一定是我还没理解透，有些口水话直接不翻译了**
 
-# Core Animation Basics(译)
+# Core Animation Basics
 
 CoreAnimation提供一种普遍的机制来给你的APP做动画。它不是用来替换view的，而是一种结合view，让view的性能更好并且动起来的一种技术。它主要是通过缓存view的内容到bitmap，bitmap是可以直接被图形硬件处理的。有时候，这可能需要你去重新思考怎么表现和管理你的APP的内容，但大多数时候你都不知道你正在使用CoreAnimation。除了缓存view的内容，CoreAnimation也可以让你制定任意的内容，把它结合在你的view里，并且一样的能够动画。
 

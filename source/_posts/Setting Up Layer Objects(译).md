@@ -1,14 +1,18 @@
 ---
 title: Setting Up Layer Objects(译)
 date: 2018-01-07 15:31:19
-tags: iOS开发 CoreAnimation(译)
+tags: 
+	- iOS开发 
+	- CoreAnimation
+	- CoreAnimation（官方文档翻译）
+	
 ---
 
 # [文档地址](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/SettingUpLayerObjects/SettingUpLayerObjects.html)
 
 **😑有些翻译的不通顺的地方，一定是我还没理解透，有些口水话直接不翻译了**
 
-# Setting Up Layer Objects(译)
+# Setting Up Layer Objects
 
 layer是CoreAnimation的核心。layer管理APP的视觉的内容，提供给改变内容风格和视觉外形的选项。iOS APP已经自动打开了layer支持，OS X APP必须显示指定打开支持。一旦启用，你需要知道如何配置和操作这些layer。
 

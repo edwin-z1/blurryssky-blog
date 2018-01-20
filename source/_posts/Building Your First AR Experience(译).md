@@ -1,14 +1,18 @@
 ---
 title: Building Your First AR Experience(译)
 date: 2018-01-11 14:26:13
-tags: iOS开发 ARKit(译)
+tags: 
+	- iOS开发 
+	- AR
+	- ARKit（官方文档翻译）
+	
 ---
 
 # [文档地址](https://developer.apple.com/documentation/arkit/building_your_first_ar_experience)
 
 **😋我先总结一波：要做一个AR效果，比如把一只小火龙放在桌子上，我们依靠`SceneKit`或者`SpriteKit`来提供小火龙虚拟图像，依靠`ARKit`为我们提供桌面的位置和大小，就是这么简单。**
 
-# Building Your First AR Experience(译)
+# Building Your First AR Experience
 
 创建一个使用AR session，并且使用plane detection来放置`SceneKit`3D内容的APP。
 (建议去文档地址里把DEMO APP下载下来，先装上试试看，以便理解。)

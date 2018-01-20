@@ -40,7 +40,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Disqus settings
-# disqus_username: blurryssky-name
+disqus_username: blurrysskys-name
 
 # Duoshuo settings
 # duoshuo_username: kaijun
@@ -59,7 +59,7 @@ ga_domain: blurryssky.github.io
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "改变就是好事!"
-# sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # Featured Tags
