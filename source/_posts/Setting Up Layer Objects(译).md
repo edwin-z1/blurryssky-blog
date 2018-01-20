@@ -1,7 +1,7 @@
 ---
 title: Setting Up Layer Objects(译)
 date: 2018-01-07 15:31:19
-tags:
+tags: iOS开发 CoreAnimation(译)
 ---
 
 # [文档地址](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/SettingUpLayerObjects/SettingUpLayerObjects.html)
@@ -58,7 +58,7 @@ layer是管理APP内容的数据对象。一个layer的内容由一个包含你�
 
 赋值给layer的图片必须是`CGImageRef `类型。当赋值图片时，记得提供适合设备的分辨率。在retina屏上，这可能要求你去调整图片的`contentsScale `。更多信息，后续会提到。
 
-### Using a Delegate to Provide the Layer’s Content
+### 🤓Using a Delegate to Provide the Layer’s Content
 
 如果你的layer的内容动态变化，你可以用`delegate`来提供和更新内容。在显示时，layer调用代理方法来提供需要的内容：
 
@@ -110,7 +110,7 @@ layer是管理APP内容的数据对象。一个layer的内容由一个包含你�
 
 对于自定义内容的layer-backed views，你应该重载`view`的方法来绘制。一个layer-backed view自动的成为它的layer的代理并且实现所需要的方法，不要去改变。而是去重写view的`drawRect: `方法。
 
-### Providing Layer Content Through Subclassing
+### 🤓Providing Layer Content Through Subclassing
 
 如果你一定要实现一个自定义的layer类，你可以重写绘制方法来做任何绘制。一个layer对象产生自定义的内容并不常见，但是它当然可以做到。比如，`CATiledLayer `管理一张大图片，通过把它切成小块来分开绘制。由于只有layer有信息关于哪一块需要在何时绘制，它自己来管理绘制行为。
 
@@ -137,6 +137,39 @@ layer是管理APP内容的数据对象。一个layer的内容由一个包含你�
 layer没有任何关于设备屏幕分辨率的解决方法。layer只是存储一个指向bitmap的指针并且把它尽可能的最好的展示在所给的像素里。如果你赋值一个图片给layer的`contents`属性，你必须通过设置`contentsScale`属性来告诉CoreAnimation关于图片的分辨率。该属性默认是1.0，这是图片被显示在一般屏幕上的值。如果图片在retina屏上，需要设置成2.0。
 
 改变`contentsScale`的值只在你直接给layer赋值bitmap的时候需要。layer-backed view会自动根据屏幕分辨率来提供适当的值。
+
+## Adjusting a Layer’s Visual Style and Appearance
+
+layer有内置的可视化装饰物，比如border和background color，可以用来补充layer的内容。由于这些可视化装饰物不要求你做任何绘制，折让layer成为单独的实体成为可能。你只需要设置一些属性，layer会处理绘制和动画。具体有哪些属性，可以参见[Layer Style Property Animations](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/LayerStyleProperties/LayerStyleProperties.html#//apple_ref/doc/uid/TP40004514-CH10-SW1)。
+
+### Layers Have Their Own Background and Border
+
+layer可以在本来的图片内容上显示被填充过的背景和描绘过的边框。background color在图片内容之下，而border在图片之上。如果layer有sublayers，它们也在border之下。由于背景色在图片之下，所以背景色会在图片透明的部分露出来。
+
+如果background color是不透明的，可以考虑设置layer的`opaque`属性为`YES`。这样可以提高显示效率。但是如果layer有圆角，那么绝不能这样做。
+
+## Layers Support a Corner Radius
+
+你可以为layer创建圆角。圆角是一种遮挡部分layer区域的视觉装饰物，由于需要提交透明的遮罩，圆角并不会影响layer的`contents`，除非`masksToBounds`被设置为`YES`。但是，圆角一定会影响到背景色和边框的绘制。
+
+You can create a rounded rectangle effect for your layer by adding a corner radius to it. A corner radius is a visual adornment that masks part of the corners of the layer’s bounds rectangle to allow the underlying content to show through, as shown in Figure 2-4. Because it involves applying a transparency mask, the corner radius does not affect the image in the layer’s contents property unless the masksToBounds property is set to YES. However, the corner radius always affects how the layer’s background color and border are drawn.
+
+## 🤓Layers Support Built-In Shadows
+
+CALayer类含有几个属性来配置阴影效果。阴影让layer看起来像是浮在它下面的内容之上。你可能会觉得有用，你可以改变阴影的颜色。
+
+阴影的`opacity`默认为0，这样可以高效的隐藏阴影。把它改成任何非0值将会使CoreAnimation来绘制阴影。由于阴影在layer之下，你可能还需要修改阴影的偏移量来让你看到它。
+
+给layer增加阴影的时候，阴影是layer内容的一部分，但是实际上它超出了layer的`bounds`。因此，如果你启用了`masksToBounds`，阴影就被边缘给切了。如果layer包含透明部分，这可能会造成一种奇怪的效果，阴影的一部分还可见，但是超出layer的部分不行了。如果你确实需要兼顾阴影和`masksToBounds`的效果，你可以用两个layer来实现。一个存放内容，包含mask，然后把它重合在另外一个有阴影效果的同样大小的layer上面。
+
+
+## Adding Custom Properties to a Layer
+
+CAAnimation和CALayer支持通过key-value coding自定义属性。你可以用这个方法给layer增加数据，然后用一个自定义的key把它取出来。你还可以关联actions在自定义属性上，那样的话，当你改变属性，一个对应的动画就会执行。
+
+[Key-Value Coding Compliant Container Classes](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW3)。
+
+[Changing a Layer’s Default Behavior](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/ReactingtoLayerChanges/ReactingtoLayerChanges.html#//apple_ref/doc/uid/TP40004514-CH7-SW1)，这篇后面会翻译到。
 
 
 
