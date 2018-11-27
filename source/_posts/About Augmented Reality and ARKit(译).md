@@ -8,11 +8,9 @@ tags:
 	
 ---
 
-# [文档地址](https://developer.apple.com/documentation/arkit/about_augmented_reality_and_arkit)
+## [文档地址](https://developer.apple.com/documentation/arkit/about_augmented_reality_and_arkit)
 
 **😋这几天看了几个AR应用，觉得屌爆了，赶快插播ARKit了解一下**
-
-# About Augmented Reality and ARKit
 
 探索支持的概念，特点，以及练习构建一个AR体验。
 

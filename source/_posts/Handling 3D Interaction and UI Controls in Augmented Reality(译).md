@@ -12,8 +12,6 @@ tags:
 
 **🤓这篇文章主要是提供一些提示和示范，来让我们做AR APP的时候增强用户体验。**
 
-# Handling 3D Interaction and UI Controls in Augmented Reality
-
 ## Overview
 
 AR给用户提供新的交互方式。但是，许多人性化交互设计规则依然有效。确保逼真的AR效果也需要精致的3D资源设计和渲染。The iOS Human Interface Guidelines包含了AR的人性化交互规则。这个工程展示了许多方法去应用这些规则，然后创造出沉浸式的AR体验。示例APP提供了一个简单的AR体验，允许用户在真实场景里放置一个或多个虚拟物体，然后用直接的手势去安排他们。APP提供了用户交互线索，来帮助用户明白AR体验的状态和他们的交互选项。
