@@ -8,7 +8,7 @@ tags:
 	
 ---
 
-## [文档地址](https://developer.apple.com/documentation/arkit/handling_3d_interaction_and_ui_controls_in_augmented_reality)
+# [文档地址](https://developer.apple.com/documentation/arkit/handling_3d_interaction_and_ui_controls_in_augmented_reality)
 
 **🤓这篇文章主要是提供一些提示和示范，来让我们做AR APP的时候增强用户体验。**
 

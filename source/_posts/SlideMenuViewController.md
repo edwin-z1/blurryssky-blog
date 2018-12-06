@@ -6,13 +6,13 @@ tags:
 	- custom UI
 ---
 
-## SlideMenuViewController
+# SlideMenuViewController
 
 非常常见的菜单选择，新的设计思路，使用UICollectionView，配合RxSwift代码，精简。
 
 ![.](SlideMenuViewController.gif)
 
-### 通过两份协议，设置页面和更新页面:
+## 通过两份协议，设置页面和更新页面:
 
 ```swift
 protocol SlideMenuViewControllerDataSource: NSObjectProtocol {

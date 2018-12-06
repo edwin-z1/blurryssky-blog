@@ -6,18 +6,18 @@ tags:
 	- custom UI
 ---
 
-## 闲聊一下
+# 闲聊一下
 
 😅年会的时候公司给每个人发了一部iphoneX，看来苹果关于iphoneX的人脸识别教程翻译要提上日程了。
 
 年前公司最后一次需求评审大会，PM想要这个效果，类似淘宝天猫京东很多APP下拉转场的效果，当时是被开发拒绝了，而我倒觉得可以试着做一下，然后让它加入[10000ui](https://github.com/blurryssky/10000ui)。这个UI其实年前就做了大概，年后回来一直在做需求。这几天需求做完了，回头来完善了一下它，趁此空挡赶紧更新下博客。
 
-## PullingHeader
+# PullingHeader
 
 
 ![.](PullingHeader.gif)
 
-### 通过两份协议，开发者可以高度自定义下拉动画、刷新和转场条件:
+## 通过两份协议，开发者可以高度自定义下拉动画、刷新和转场条件:
 
 ```swift
 protocol PullingRefreshing: NSObjectProtocol {
@@ -50,7 +50,7 @@ enum PullingState {
 
 * **shouldTransition(fraction:)** 和上面的第一个方法类似，这里只需要在合适的下拉位置来决定是否转场。
 
-### 通过`PullingHeader `对象，来管理下拉过程:
+## 通过`PullingHeader `对象，来管理下拉过程:
 
 通过上面的协议，`PullingHeader `会自动变化状态，并且在初始化方法中，`PullingHeader `需要得到所有信息。
 

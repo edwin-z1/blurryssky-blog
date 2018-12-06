@@ -8,7 +8,7 @@ tags:
 	
 ---
 
-## [文档地址](https://developer.apple.com/documentation/arkit/building_your_first_ar_experience)
+# [文档地址](https://developer.apple.com/documentation/arkit/building_your_first_ar_experience)
 
 **😋要做一个AR效果，比如把一只小火龙放在桌子上，我们依靠`SceneKit`或者`SpriteKit`来提供小火龙虚拟图像，依靠`ARKit`为我们提供桌面的位置和大小。**
 
@@ -19,7 +19,7 @@ tags:
 
 这个实例APP使用`ARKit`world tracking session，把内容展示在`SceneKit`的view里。为了展示plane detection，APP简单的放置了一个`SCNPlane`对象来可视化探测到的`ARPlaneAnchor`对象。
 
-### Configure and Run the AR Session
+## Configure and Run the AR Session
 
 `ARSCNView`是一个`SceneKit`view,包含一个`ARSession`对象，用来管理为了创造AR体验的运动跟踪和图片处理。另外，为了运行session,你必须提供一个session configuration。
 
@@ -34,7 +34,7 @@ sceneView.session.run(configuration)
 只在view将被显示在屏幕上的时候运行你的seesion。
 > 如果你的APP用ARKit作为核心功能，在你的APP的`Info.plist`的`UIRequiredDeviceCapabilities`栏里添加arkit，这样可以避免不支持你的APP的设备安装此APP。如果AR只是次要的功能，使用`isSupported`属性来决定是否提供AR功能。
 
-### Place 3D Content for Detected Planes
+## Place 3D Content for Detected Planes
 
 在设置好你的AR session后，你可以用`SceneKit`在view里放置内容。
 在启用plane detection后,`ARKit`为每一个探测到的平面添加和更新anchors。默认的，`ARSCNView`会为每一个anchor在`SceneKit`场景里添加一个`SCNNode`。你的view的代理可以实现`renderer(_:didAdd:for:)`方法来增加内容到场景里。

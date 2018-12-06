@@ -7,7 +7,7 @@ tags:
 	
 ---
 
-## 诞生原因
+# 诞生原因
 
 😅我的天，我真是到处挖坑，先列一个未完成列表和原因：
 
@@ -21,12 +21,12 @@ tags:
 
 这几天工作的时候遇到一个需求可能会需要去修改一下`UICollectionView `的布局，就去研究了一下`UICollectionViewLayout `这个类。其实以前做过一个像花瓣一样从中心绽开的选择菜单，当时是用按钮和循环做的，这次就索性用`UICollectionViewLayout`的子类去重构一次，顺便学习新知识。
 
-## PetalLayout
+# PetalLayout
 
 
 ![.](PetalLayout.gif)
 
-### sample里我实现了三种效果:
+## sample里我实现了三种效果:
 
 * 依次插入删除
 

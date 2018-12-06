@@ -8,7 +8,7 @@ tags:
 	
 ---
 
-## [文档地址](https://developer.apple.com/documentation/arkit/creating_face_based_ar_experiences)
+# [文档地址](https://developer.apple.com/documentation/arkit/creating_face_based_ar_experiences)
 
 **😋使用ARKit来做人脸识别，一切变得简单不少，还可以使用超多的脸部细节**
 
@@ -22,7 +22,7 @@ tags:
 * 在用户面部贴上虚拟的3D内容（3D内容可以被用户的脸遮挡）。
 * 一个会跟着用户面部变化而动画的简单机器人。
 
-### Start a Face Tracking Session in a SceneKit View
+## Start a Face Tracking Session in a SceneKit View
 
 像其他的`ARKit`用法一样，脸部跟踪需要配置和启动`ARSession`对象，然后把摄像图片和虚拟内容在一个*view*上渲染。关于更多的设置*session*和*view*的细节,请看[About Augmented Reality and ARKit]()、[Building Your First AR Experience]()。这里使用`SceneKit `来展示AR体验，也可以用`SpriteKit `或用`Metal`打造自定义的渲染器，请看（[ARSKView and Displaying an AR Experience with Metal]()）。启用面部跟踪，需要创建一个`ARFaceTrackingConfiguration `实例，配置它的属性，把它传有*view*关联的`ARSession`对象的**run(_:options:)**方法，示例如下。
 
@@ -35,7 +35,7 @@ session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
 
 记得使用**ARFaceTrackingConfiguration.isSupported**来检查设备是否支持。
 
-### Track the Position and Orientation of a Face
+## Track the Position and Orientation of a Face
 
 面部追踪启用时，`ARKit`自动为运行的*AR session*添加`ARFaceAnchor `对象，这个对象包含了用户脸部的信息，包括位置和方向。
 
@@ -56,7 +56,7 @@ func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: AR
 在**renderer(_:didAdd:for:)**方法里调用了**setupFaceNodeContent**方法来为`SceneKit `内容添加**faceNode**。如果你在代码里改变**showsCoordinateOrigin**变量的值，会在*node*上增加一个可见的x/y/z坐标轴，标识*face anchor*坐标系的原点。 
 
 
-### Use Face Geometry to Model the User’s Face
+## Use Face Geometry to Model the User’s Face
 
 `ARKit `提供一个粗略的匹配用户脸部的大小、形状、拖布结构、当前表情的3D网状几何*geometry*。`ARKit `也提供
 `ARSCNFaceGeometry `类，提供一种简单的方式来可视化这个网。
@@ -89,7 +89,7 @@ func update(withFaceAnchor anchor: ARFaceAnchor) {
 ```
 
 
-### Place 3D Content on the User’s Face
+## Place 3D Content on the User’s Face
 
 另一个使用`ARKit `提供的面部网络的用法是创建一个*occlusion geometry*(😦这个有点抽象，我确实不知道怎么翻译)。*occlusion geometry*是一个3D模型，它不渲染任何可见内容（允许相机图片穿过），但是阻断了其他虚拟内容的相机的*view*。
 
@@ -107,7 +107,7 @@ occlusionNode.renderingOrder = -1
 
 （其实不太理解原理）
 
-### Animate a Character with Blend Shapes
+## Animate a Character with Blend Shapes
 
 除了上面的例子外，`ARKit `也提供一种更抽象的用户面部表情模型，用一个`blendShapes `字典的形式。你可以用字典里的多个值去控制你的2D或者3D资源的动画参数，创建一个特征（比如头像或者木偶），跟随用户的面部移动和表情。
 
