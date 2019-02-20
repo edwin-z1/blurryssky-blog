@@ -68,27 +68,15 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 
 # Friends
-# friends: [
-#     {
-#         title: "Kaijun's Blog",
-#         href: "http://blog.kaijun.rocks"
-#     },{
-#         title: "Hux Blog",
-#         href: "http://huangxuan.me"
-#     },{
-#         title: "Foo",
-#         href: "#"
-#     },{
-#         title: "Bar",
-#         href: "#"
-#     },{
-#         title: "Example Friends",
-#         href: "#"
-#     },{
-#         title: "It helps SEO",
-#         href: "#"
-#     }
-# ]
+friends: [
+    {
+        title: "Void",
+        href: "#"
+    },{
+        title: "Placeholder",
+        href: "#"
+    }
+]
 
 
 #Custom Setting End
