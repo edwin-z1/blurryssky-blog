@@ -2,8 +2,7 @@
 title: SlideMenuViewController
 date: 2018-11-27 16:40:09
 tags:
-	- iOS开发 
-	- custom UI
+	- Custom UI
 ---
 
 # SlideMenuViewController

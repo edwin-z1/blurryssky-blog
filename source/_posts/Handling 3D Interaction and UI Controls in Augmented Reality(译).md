@@ -2,9 +2,7 @@
 title: Handling 3D Interaction and UI Controls in Augmented Reality(译)
 date: 2018-01-14 17:31:08
 tags: 
-	- iOS开发 
 	- AR
-	- ARKit（官方文档翻译）
 	
 ---
 

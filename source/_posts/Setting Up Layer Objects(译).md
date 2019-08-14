@@ -2,9 +2,7 @@
 title: Setting Up Layer Objects(译)
 date: 2018-01-07 15:31:19
 tags: 
-	- iOS开发 
 	- CoreAnimation
-	- CoreAnimation（官方文档翻译）
 	
 ---
 

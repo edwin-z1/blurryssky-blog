@@ -2,8 +2,7 @@
 title: PetalLayout
 date: 2018-01-30 16:48:44
 tags:
-	- iOS开发 
-	- custom UI
+	- Custom UI
 	
 ---
 

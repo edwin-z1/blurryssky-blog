@@ -2,9 +2,7 @@
 title: Core Animation Basics(译)
 date: 2018-01-04 16:44:52
 tags: 
-	- iOS开发 
 	- CoreAnimation
-	- CoreAnimation（官方文档翻译）
 	
 ---
 

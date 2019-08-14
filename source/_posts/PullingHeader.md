@@ -2,8 +2,7 @@
 title: PullingHeader
 date: 2018-03-21 18:33:35
 tags:
-	- iOS开发 
-	- custom UI
+	- Custom UI
 ---
 
 # 闲聊一下

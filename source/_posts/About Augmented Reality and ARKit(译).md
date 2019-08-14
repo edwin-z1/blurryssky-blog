@@ -2,9 +2,7 @@
 title: About Augmented Reality and ARKit(译)
 date: 2018-01-11 10:32:35
 tags: 
-	- iOS开发 
 	- AR
-	- ARKit（官方文档翻译）
 	
 ---
 

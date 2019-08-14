@@ -1,7 +1,7 @@
 ---
 title: 《Data Structures and Algorithms in Swift》摘抄
 date: 2019-02-19 16:28:23
-tags: iOS开发
+tags: 
 ---
 
 
@@ -25,7 +25,7 @@ O(1) | O(1) | O(n)
 
 可以避免**cow**的情况:
 
-1. 引用技术为1
+1. 引用计数为1
 ```swift
 guard !isKnownUniquelyReferenced(&head) else {
   return
@@ -203,12 +203,12 @@ O(logn) | O(logn)| O(n)
 
 1. Bubble
 2. Selection. Find the lowest value and swap to i.
-3. Insertion. 和冒泡算法不同的是，被交换的值会一直被比较到最后的位置。
+3. Insertion. 和选择类似，只是直接交换而不是去寻找i。
 
 ## merge sort
 
 不停的分割直到只有1个值，然后把分割后的值两两合并，合并的时候排序。
-O(logn).
+O(nlogn).
 
 
 ## radix sort
@@ -220,14 +220,16 @@ O(k*n).k is the longest digit.
 
 ![](heap_sort.png)
 
-swap and siftDown. O(logn).
+swap and siftDown. O(nlogn).
 
 ## quicksort
 
 ![](quick_sort.png)
 
 pivot的选择对时间复杂度影响很大，有一种策略是使用首位、中间位、末位三个数中的中间值作为pivot。
-O(logn).
+O(nlogn).
+
+如果基本已经排好序，复杂度为O(n2)
 
 ## graphs
 

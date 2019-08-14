@@ -2,9 +2,7 @@
 title: Building Your First AR Experience(译)
 date: 2018-01-11 14:26:13
 tags: 
-	- iOS开发 
 	- AR
-	- ARKit（官方文档翻译）
 	
 ---
 

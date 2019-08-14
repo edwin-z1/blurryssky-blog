@@ -1,7 +1,7 @@
 ---
 title: 《App架构》读书笔记（三）MVVM
 date: 2018-12-03 15:03:02
-tags: iOS开发
+tags: 
 ---
 
 # 4.Model-View-ViewModel

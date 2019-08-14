@@ -2,9 +2,7 @@
 title: Creating Face-Based AR Experiences(译)
 date: 2018-03-26 14:17:11
 tags: 
-	- iOS开发 
 	- AR
-	- ARKit(官方文档翻译）
 	
 ---
 
